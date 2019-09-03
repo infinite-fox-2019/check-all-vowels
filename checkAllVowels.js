@@ -1,4 +1,4 @@
-function checkVowels (str) {
+function checkAllVowels (str) {
   var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 
   var isAllVowels = true;
@@ -20,7 +20,7 @@ function checkVowels (str) {
 
 // Test case
 
-console.log(checkVowels('ABCDEED'));
-console.log(checkVowels('AooUEEi'));
-console.log(checkVowels('vvAddAvv'));
-console.log(checkVowels('uueeEEOu'));
+console.log(checkAllVowels('ABCDEED'));
+console.log(checkAllVowels('AooUEEi'));
+console.log(checkAllVowels('vvAddAvv'));
+console.log(checkAllVowels('uueeEEOu'));
