@@ -1,26 +1,20 @@
-function checkVowels (str) {
-  var vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-
-  var isAllVowels = true;
-
-  for (var i = 0; i < str.length; i++) {
-    var check = false;
-    for (var j = 0; j < vowels.length; j++) {
-      if (str[i] === vowels[j]) {
-        check = true;
-        break;
+function checkVowel(str){
+  var kamus = ['a','i','u','e','o']
+  var stringSplit = str.split('')
+  var tampung = []
+  for(var i=0; i<kamus.length; i++){
+      for(var j=0; j<stringSplit.length; j++){
+          if(kamus[i]===stringSplit[j]){
+              tampung.push(stringSplit[j])
+          }
       }
-    }
-    if (!check) {
-      isAllVowels = false;
-    }
   }
-  return isAllVowels;
+  if(tampung.join('').length !== str.length){
+      return false
+  }else{
+      return true
+  }
 }
-
-// Test case
-
-console.log(checkVowels('ABCDEED'));
-console.log(checkVowels('AooUEEi'));
-console.log(checkVowels('vvAddAvv'));
-console.log(checkVowels('uueeEEOu'));
+console.log(checkVowel('makan'))
+console.log(checkVowel('aiueo'))
+console.log(checkVowel('uaiuai'))
