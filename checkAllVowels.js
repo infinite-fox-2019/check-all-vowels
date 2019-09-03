@@ -4,7 +4,6 @@ function checkVowel(inputString){
     vocal = vocal.filter(function(eachVocal){
         return eachVocal === inputString[0]
     })
-    // console.log(vocal)
     if(vocal.length)return true
     else return checkVowel(inputString.slice(1))
 }
